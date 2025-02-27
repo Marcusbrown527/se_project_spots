@@ -20,4 +20,4 @@ This project is made so all the elements are displayed correctly on popular scre
 
 ## Video
 
-[  ](https://drive.google.com/file/d/1fHCK2kY4Q-PLg4of-XRcqArpKbedPyQG/view?usp=drive_link)
+- [ video ](https://drive.google.com/file/d/1fHCK2kY4Q-PLg4of-XRcqArpKbedPyQG/view?usp=drive_link)
