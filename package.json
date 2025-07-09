@@ -1,6 +1,10 @@
 {
   "name": "se_project_spots",
+<<<<<<< HEAD
   "version": "0.0.1",
+=======
+  "version": "0.1.0",
+>>>>>>> origin/main
   "description": "image sharing site",
   "main": "index.js",
   "scripts": {
@@ -30,9 +34,13 @@
   },
   "dependencies": {
     "core-js": "3.23.5"
+<<<<<<< HEAD
   },
   "bugs": {
     "url": "https://github.com/Marcusbrown527/se_project_spots/issues"
   },
   "homepage": "https://github.com/Marcusbrown527/se_project_spots#readme"
+=======
+  }
+>>>>>>> origin/main
 }
