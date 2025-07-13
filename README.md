@@ -17,10 +17,8 @@ This project is made so all the elements are displayed correctly on popular scre
 This webpage is deployed to Github Pages
 
 <<<<<<< HEAD
-- [Deployment Link] (https://marcusbrown527.github.io/se_project_spots/)
-=======
-- [Deployment Link]  (https://marcusbrown527.github.io/se_project_spots/)
->>>>>>> origin/main
+
+- # [Deployment Link] (https://marcusbrown527.github.io/se_project_spots/)
 
 ## Video
 
