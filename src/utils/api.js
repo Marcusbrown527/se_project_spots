@@ -9,7 +9,7 @@ export default class Api {
     return Promise.all([this.getInitialCards(), this.editUserInfo()]);
   }
 
-  getInitialCards() {
+  getInitialCards(name, link) {
     return fetch(`${this._baseUrl}/cards`, {
       headers: this._headers,
     }).then((res) => {

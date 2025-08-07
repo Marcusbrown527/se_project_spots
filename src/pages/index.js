@@ -44,6 +44,9 @@ const api = new Api({
 api
   .getInitialCards()
   .then((cardData) => {
+    cardImageEl.src = data.link;
+    cardImageEl.alt = data.name;
+    cardNameEl.textContent = data.name;
     const card = (cardData, "#card-template");
     const cardElement = getCardElement(cardData);
     cardsList.prepend(cardElement);
