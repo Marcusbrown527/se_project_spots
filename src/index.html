@@ -12,26 +12,33 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spots logo" class="header__logo" />
+        <img src="<%=require('./images/logo.svg')%>" alt="Spots logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+              <img class="profile__pencil-icon" 
+              src="<%=require('./images/pencil-light.svg')%>" 
+              alt="Pencil icon"/>
+            </button>
           <img
-            src="./images/images/avatar.jpg"
+            src="<%=require('./images/images/avatar.jpg')%>"
             alt="Bessie Coleman"
             class="profile__avatar"
           />
+        </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
-              <img src="./images/pencil.svg" alt="Pencil icon" />Edit Profile
+              <img src="<%=require('./images/pencil.svg')%>" alt="Pencil icon" />Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img src="./images/plus.svg" alt="plus icon" />New Post
-          </button>
-        </section>
+            <img src="<%=require('./images/plus.svg')%>" alt="plus icon" />New Post
+            </button>
+          </main>
         <section class="cards page__section">
           <ul class="cards__list">
             <template id="card-template">
@@ -46,13 +53,12 @@
             </template>
           </ul>
         </section>
-      </main>
       <footer class="footer">
         <p class="footer__content">2024 &copy; Spots</p>
       </footer>
       <div class="modal" id="edit-modal">
         <div class="modal__container">
-          <button type="button" id="modal__submit-button_disabled" class="modal__close-btn"></button>
+          <button type="button" id="modal__submit-btn_disabled" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
           <form name="edit__profile" id="profile-form" class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label">
@@ -86,6 +92,8 @@
         </div>
       </div>
     </div>
+</div>
+</div>
 
     <div class="modal" id="add-card-modal">
       <div class="modal__container">
@@ -130,6 +138,37 @@
       <img src="#" alt="" class="modal__image">
       <p class="modal__caption"></p>
   </div>
+</div>
+<div class="modal" id="avatar-modal">
+  <div class="modal__container">
+    <button type="button" id="modal__submit-btn_disabled" class="avatar__close-btn"></button>
+    <h2 class="modal__title">Edit Avatar</h2>
+    <form name="edit__avatar" id="edit-avatar-form" class="modal__form" novalidate>
+      <label for="profile-avatar-input" class="modal__label">
+        Avatar
+        <input
+          id="profile-avatar-input"
+          name="avatar"
+          class="modal__input"
+          placeholder="avatar goes here"
+          required
+        />
+        <span id="profile-avatar-input-error" class="modal__error"></span>
+      </label>
+      <button type="submit" id="modal__submit-btn-error" class="modal__submit-btn avatar__submit-btn">Save</button>
+    </form>
+  </div>
+</div>
+<div class="modal" id="delete-modal">
+  <div class="modal__container">
+    <button type="button" id="modal__submit-btn_disabled" class="delete__close-btn"></button>
+    <h2 class="modal__title">Are you sure you want to delete this image?</h2>
+    <form name="edit__delete" id="delete-form" class="delete__form" novalidate>
+      <button type="submit" id="modal__submit-btn-error" class="modal__submit-btn delete__submit-btn">Delete</button>
+      <button type="submit" id="modal__submit-btn-error" class="modal__submit-btn cancel__submit-btn">Cancel</button>
+    </form>
+  </div>
+</div>
 </div>
   </body>
 </html>
