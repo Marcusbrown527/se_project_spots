@@ -1,5 +1,5 @@
 import "./index.css";
-import { enableValidation, settings } from "../scripts/validation.js";
+import { enableValidation, config } from "../scripts/validation.js";
 import Api from "../utils/api.js";
 
 const initialCards = [
@@ -44,9 +44,6 @@ const api = new Api({
 api
   .getInitialCards()
   .then((cardData) => {
-    cardImageEl.src = data.link;
-    cardImageEl.alt = data.name;
-    cardNameEl.textContent = data.name;
     const card = (cardData, "#card-template");
     const cardElement = getCardElement(cardData);
     cardsList.prepend(cardElement);
@@ -241,7 +238,7 @@ function handleAddCardSubmit(evt) {
   api.getInitialCards(cardLinkInput);
   cardsList.prepend(cardElement);
   evt.target.reset(cardSubmitBtn);
-  disabledButton(cardSubmitBtn, settings);
+  disabledButton(cardSubmitBtn, config);
   closeModal(cardModal);
 }
 
@@ -307,4 +304,4 @@ function handleLikeClick() {
   }
 }
 
-enableValidation(settings);
+enableValidation(config);
